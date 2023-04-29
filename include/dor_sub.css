@@ -1,0 +1,840 @@
+/* 서브 */
+
+.sub_all { position:relative; width:100%;float:left; margin-top:20px; margin-bottom:20px;}
+.sub_ta {  position:relative; width:1250px; margin:0 auto; *zoom:1; }
+.sub_banner {position:relative; width:100%;float:left;background: url('/web/upload/dor_main_img/sub_banner.png') no-repeat 50% 50% ; width:100%; height:100px; }
+
+
+/* 해상도별 규격 */
+
+@media all and (min-width:1025px) and (max-width:1250px) { 
+.sub_ta {  position:relative; width:1025px; margin:0 auto; *zoom:1;transition:all .3s; }
+}
+@media all and (min-width:768px) and (max-width:1024px) { 
+.sub_ta {  position:relative; width:768px; margin:0 auto; *zoom:1; transition:all .3s;}
+}
+
+/* 해상도별 규격 */
+
+
+/* 상품목록 */
+
+.dor_product_title {
+display:block;
+font-family : "Noto-Thin" ;
+font-size:35px;
+animation: domoa_product_title 1s linear forwards;
+opacity: 0; 
+}
+
+.dor_product_title_ta {
+text-align:center;
+padding:10px 0 10px;
+}
+.dor_product_title_ta p {
+margin-top:20px;
+}
+.dor_product_title_ta img {
+max-width:100%;
+}
+
+
+ @keyframes domoa_product_title {
+  0%{transform: translateY(30px); opacity: 0; }
+  100%{transform: translateY(0%); opacity: 1;}
+}
+
+
+.menuCategory {
+animation: menuCategory 1s linear forwards;
+animation-delay: 0.5s;
+opacity: 0;
+
+}
+
+ @keyframes menuCategory {
+  0%{transform: translateY(30px); opacity: 0; }
+  100%{transform: translateY(0%); opacity: 1;}
+}
+
+.chips { width:10px; height:10px; border:1px solid #f4f4f4;margin:0 auto; display:inline-block; border-radius: 50%; margin-right:2px}
+
+/* 상품목록 */
+
+
+/* 상품상세 */
+
+
+/* 모바일 소비자,판매가 노출 */
+@media all and (min-width:480px) { 
+.do_detile_mo {display:none;}
+}
+/* 모바일 소비자,판매가 노출 */
+
+
+.dm_detail_title {
+ font-family : "Noto-Thin" ;
+ font-size:20px;
+ color:#000;
+}
+
+.do_detile_item_01 {
+ font-family : "Noto-Thin" ;
+ font-size:12px;
+margin-top:20px;
+color:#555;
+}
+
+
+
+.do_detile_item_info {
+border-top:2px solid #000;
+padding-top:20px;
+}
+.xans-product-detail .infoArea table tbody tr[rel^="상품명"] {display:none;}
+.xans-product-detail .infoArea table tbody tr[rel^="상품요약정보"] {display:none;}
+.xans-product-detail .infoArea { font-family : "Noto-Thin" ; }
+
+
+/* 구매버튼관련 */
+.buy_bt {
+width:99%;
+border:2px solid #222222;
+height:50px;
+text-align:center;
+line-height:50px;
+letter-spacing: 1px;
+ font-family:'Noto-Thin'; 
+ transition:all .3s;
+ font-size:14px;
+ font-weight:bold;
+ background-color:#222222;
+color:#fff;
+}
+.buy_bt:hover {
+background-color:#fff;
+color:#000;
+}
+
+
+.basket_bt {
+width:49%;
+border:1px solid #dddddd;
+height:44px;
+text-align:center;
+line-height:44px;
+letter-spacing: 1px;
+ font-family:'Noto-Thin'; 
+ transition:all .3s;
+float:left;
+}
+.basket_bt:hover {
+background-color:#dddddd;
+color:#000;
+ transition:all .3s;
+}
+
+
+
+.wish_bt {
+width:49%;
+border:1px solid #dddddd;
+height:44px;
+text-align:center;
+line-height:44px;
+letter-spacing: 1px;
+ font-family:'Noto-Thin'; 
+ transition:all .3s;
+float:right;
+}
+.wish_bt:hover {
+background-color:#dddddd;
+color:#000;
+ transition:all .3s;
+}
+
+
+
+/* 구매버튼관련 */
+
+/* 상품상세 정보 */
+
+.do_relation_title span {
+position: absolute; 
+top:0px;
+left: 50%;
+  transform: translate(-50%, -0%);
+background-color:#222;
+padding:5px 20px 5px 20px;
+border-radius:0 0 20px 20px;
+text-align:center;
+font-family:'Noto-Thin'; 
+font-size:14px;
+color:#fff;
+}
+.do_relation_title {
+position: relative; 
+border-top:2px solid #222;
+margin-top:50px;
+margin-bottom:50px;
+padding:15px 0 15px;
+}
+
+.do_menu {
+width:100%;
+border-bottom:2px solid #222;
+text-align:center;
+margin-top:30px;
+}
+
+
+
+
+.do_menu li {
+width:150px;
+display:inline-block;
+background-color:#222;
+height:30px;
+line-height:30px;
+text-align:center;
+border-radius:10px 10px 0px 0px;
+font-family:'Noto-Thin'; 
+font-size:14px;
+transition:all .3s;
+}
+
+.do_menu li a {
+color:#fff;
+}
+.do_menu li:hover {
+background-color:#408ede;
+transition:all .3s;
+}
+
+.do_detile_board_title {
+font-family:'Noto-Thin'; 
+font-size:14px;
+font-weight:bold;
+margin-bottom:30px;
+}
+.do_board_ta td:nth-child(3), .do_board_ta td:nth-child(4) {
+text-align:right;
+}
+.do_board_ta {
+width:100%;
+border-top:1px solid #e8e8e8;
+}
+.do_board_ta td {
+padding:30px 0 30px;
+border-bottom:1px solid #e8e8e8;
+}
+.do_detile_board_bt {
+float:right;
+margin-top:20px;
+}
+
+.do_board_ta td img {
+max-width:100%;
+}
+.do_board_ta_mo_width { width:5%  }
+
+
+/* 1025해상도 */
+@media all and (min-width:1025px) and (max-width:1200px) { 
+.xans-product-detail .detailArea { padding:0 0 0 540px; }/* 전체틀 */
+.xans-product-detail .imgArea { float:left; width:400px; margin:0 0 0 -450px; } /* 상품이미지 */
+.xans-product-detail .imgArea .keyImg { width:400px; margin:0 auto; } /* 상품이미지 */
+.xans-product-detail .imgArea .keyImg img { max-width:400px; border:1px solid #ececec; cursor:pointer; }/* 상품이미지 */
+.xans-product-detail .infoArea {margin-left:10px; width:450px;} /* 상품정보 */
+}
+/* 1025해상도 */
+
+/* 768 해상도 */
+@media all and (min-width:768px) and (max-width:1024px) { 
+.xans-product-detail .detailArea { padding:0 0 0 390px; } /* 전체틀 */
+
+.xans-product-detail .imgArea { float:left; width:350px; margin:0 0 0 -380px; } /* 상품이미지 */
+.xans-product-detail .imgArea .keyImg { width:350px; margin:0 auto; } /* 상품이미지 */
+.xans-product-detail .imgArea .keyImg img { max-width:350px; border:1px solid #ececec; cursor:pointer; } /* 상품이미지 */
+
+.xans-product-detail .infoArea {margin-left:10px; width:350px;} /* 상품정보 */
+
+
+.xans-product-detail .imgArea .listImg {  position:absolute; top:350px; left:0px;  width:340px;} /* 추가이미지 리스트 */
+.xans-product-detail .imgArea .listImg ul { min-width:340px; height:170px; overflow:hidden;} /* 추가이미지 리스트 */
+.xans-product-detail .imgArea .listImg li { display:inline-block; margin-right:10px; } /* 추가이미지 리스트 */
+
+.do_board_ta_mo_width { width:10% }
+
+}
+/* 768 해상도 */
+
+
+
+/* 상품상세 */
+
+
+
+/* 로그인 */
+.do_login_bt_01 {
+display:block;
+width:100%;
+background-color:#222;
+transition:all .3s;
+text-align:center;
+line-height:35px;
+color:#fff;
+font-family : "Noto-Thin" ;
+border:2px solid #222;
+margin-bottom:7px;
+}
+.do_login_bt_01:hover {
+color:#000;
+background-color:#fff;
+}
+
+.do_login_bt_02 {
+display:inline-block;
+width:30%;
+background-color:#fff;
+border:1px solid #ddd;
+color:#fff;
+font-size:11px;
+line-height:35px;
+text-align:center;
+margin-right:9px;
+font-family : "Noto-Thin" ;
+transition:all .3s;
+}
+.do_login_bt_02:hover {
+color:#000;
+background-color:#f4f4f4;
+}
+
+.do_login_bt_03_ta {
+display:block;
+width:100%;
+background-color:#555;
+transition:all .3s;
+text-align:center;
+line-height:35px;
+color:#fff;
+font-family : "Noto-Thin" ;
+border:2px solid #555;
+margin-top:7px;
+}
+.do_login_bt_02:nth-child(3) {
+margin-right:0px;
+}
+.do_login_bt_02_ta {
+font-size:0px;
+margin-top:7px;
+}
+
+.do_login_all {
+border:0px solid #222;
+}
+.domoa_sub_title {
+display:block;
+font-family : "Noto-Thin" ;
+font-size:35px;
+animation: domoa_sub_title_ta 1s linear forwards;
+opacity: 0; 
+margin-bottom:20px;
+}
+
+.domoa_sub_title_ta {
+text-align:center;
+padding:20px 0 0px;
+}
+
+
+ @keyframes domoa_sub_title_ta {
+  0%{transform: translateY(30px); opacity: 0; }
+  100%{transform: translateY(0%); opacity: 1;}
+}
+
+.xans-member-login .login fieldset .snsArea li {
+ text-align:center;
+}
+
+
+.do_find_id_text_01  {
+text-align:center;
+color:#555;
+line-height:20px;
+margin-top:20px;
+border-bottom:1px solid #e8e8e8;
+padding-bottom:10px;
+}
+
+
+/* 로그인 */
+
+
+
+/* 게시판 일반 글목록 */
+.do_sub_title {
+display:block;
+font-family : "Noto-Thin" ;
+font-size:35px;
+animation: do_sub_title_ta 1s linear forwards;
+opacity: 0; 
+margin-bottom:20px;
+}
+
+.do_sub_title_ta {
+text-align:center;
+padding:40px 0 0px;
+}
+
+
+ @keyframes do_sub_title_ta {
+  0%{transform: translateY(30px); opacity: 0; }
+  100%{transform: translateY(0%); opacity: 1;}
+}
+
+.do_board_img {
+text-align:center;
+margin-bottom:50px;
+}
+.do_board_img img {
+max-width:100%;
+}
+
+.do_sub_board_ta {
+width:100%;
+font-size:0px;
+
+padding:30px 0 30px;
+border-top:1px solid #e9e9e9;
+
+}
+.do_sub_board_ta:hover {
+background-color:#fbfbfb;
+}
+
+.do_board_padding {
+padding:0 10px 0 10px;
+}
+
+.do_board_ta_left {
+width:70%;
+text-align:left;
+}
+.do_board_ta_right {
+width:30%;
+text-align:right;
+}
+.do_sub_board_ta span {
+font-family : "Noto-Thin" ;
+font-size:14px;
+display:inline-block;
+}
+
+.do_board_ta_right span {
+padding-left:10px;
+}
+
+.do_board_subject {
+ transition:all .3s;
+ }
+.do_sub_board_ta:hover .do_board_subject {
+transform:translateX(10px);
+ transition:all .3s;
+}
+.do_board_subject_notice {
+ transition:all .3s;
+ font-weight:bold;
+ }
+.do_sub_board_ta:hover .do_board_subject_notice {
+transform:translateX(10px);
+ transition:all .3s;
+}
+
+
+.do_board_category {
+padding:0 15px 0 15px;
+}
+
+.do_board_bt_ta {
+padding-top:20px;
+border-top:1px solid #e9e9e9;
+text-align:right;
+}
+.do_board_bt {
+font-family : "Noto-Thin" ;
+display:inline-block;
+width:120px;
+height:40px;
+line-height:40px;
+text-align:center;
+background-color:#222;
+color:#fff;
+font-size:14px;
+border-radius: 5px; 
+border:2px solid #222;
+transition:all .3s;
+}
+.do_board_bt:hover {
+background-color:#fff;
+color:#222;
+transition:all .3s;
+}
+
+@media all and (min-width:1025px) and (max-width:1200px) { 
+
+.do_sub_board_ta span {
+font-family : "Noto-Thin" ;
+font-size:12px;
+display:inline-block;
+}
+
+.do_board_ta_left {
+width:65%;
+text-align:left;
+}
+.do_board_ta_right {
+width:35%;
+text-align:right;
+}
+
+}
+
+
+/* 게시판 일반 글목록 */
+
+/* 게시판 일반 글상세 */
+
+.do_board_read_ta {
+border-top:1px solid #e8e8e8;
+text-align:center;
+padding-top:30px;
+}
+
+.do_board_read_01 {
+font-size:20px;
+font-family : "Noto-Thin" ;
+}
+.do_board_read_02 {
+font-size:13px;
+margin-top:20px;
+font-family : "Noto-Thin" ;
+color:#979797;
+}
+
+.do_board_read_03 {
+border-top:1px solid #e8e8e8;
+padding-top:30px;
+margin-top:30px;
+padding-bottom:30px;
+}
+.do_board_read_03 img {
+
+max-width:100%;
+
+}
+
+.do_board_read_04, .do_board_read_05 {
+border-top:1px solid #e8e8e8;
+padding-top:30px;
+padding-bottom:30px;
+
+}
+
+/* 게시판 일반 글상세 */
+
+
+/* 게시판 일반 글쓰기 */
+
+.do_board_write_ta_01 {
+display:block;
+border:1px solid #e8e8e8;
+padding:20px;
+margin-bottom:10px;
+}
+
+.do_board_write_ta_01 span:nth-child(1) {
+font-family : "Noto-Thin" ;
+margin-right:20px;
+}
+
+.do_board_write_01 {
+background-color:#fff;
+}
+
+.do_board_write_ta_02 {
+border:1px solid #e8e8e8;
+padding:20px;
+display:block;
+margin-top:10px;
+}
+
+.do_board_write_ta_02_01:nth-child(1) {
+border-top:0px solid #e8e8e8;
+}
+.do_board_write_ta_02_01 {
+padding:10px 0 10px;
+border-top:1px solid #e8e8e8;
+}
+.do_board_write_ta_02_01 span:nth-child(1) {
+margin-right:10px;
+display:inline-block;
+}
+
+@media all and (min-width:320px) and (max-width:767px) {  
+
+.do_board_write_767_01 input {
+width:200px  !important ;
+}
+.do_board_write_767_02 input {
+width:60px  !important ;
+}
+
+}
+
+/* 게시판 일반 글쓰기 */
+
+
+/* 갤러리 일반 목록 */
+
+
+.do_board_gl_01 {
+font-family : "Noto-Thin" ;
+font-size:16px;
+
+}
+
+
+.do_board_gl_bt_ta {
+padding-top:20px;
+border-top:1px solid #e9e9e9;
+text-align:center;
+}
+.do_board_gl_bt {
+font-family : "Noto-Thin" ;
+display:inline-block;
+width:120px;
+height:40px;
+line-height:40px;
+text-align:center;
+background-color:#222;
+color:#fff;
+font-size:14px;
+border-radius: 5px; 
+border:2px solid #222;
+transition:all .3s;
+}
+.do_board_gl_bt:hover {
+background-color:#fff;
+color:#222;
+transition:all .3s;
+}
+
+
+
+
+/* 갤러리 일반 목록 */
+
+
+/* 상품 일반 목록 */
+
+
+.do_board_product_ta {
+display:inline-block;
+width:18%;
+border:1px solid #e9e9e9;
+margin:10px 10px 10px 10px;
+transition:all .3s;
+}
+
+.do_board_product_ta:hover {
+opacity: 0.8;
+ transition:all .3s;
+}
+.do_board_product_ta:hover .do_board_product_text_01 {
+color:#3f81d2;
+transition:all .3s;
+}
+
+.do_board_product_01 {
+position:relative; 
+display:block;
+width:100%;
+height:300px;
+background-color:#fdfdfd;
+border-bottom:1px solid #e9e9e9;
+}
+.do_board_product_01 img {
+width:100% !important;
+height:100%;
+position:relative; 
+z-index:2;
+background-color:#fdfdfd;
+}
+.do_board_product_01 span::before {
+content: "NO IMG";
+ position: absolute;
+ top: 50%;
+ left: 50%;
+ transform: translate(-50%, -50%);
+z-index:1;
+font-size:15px;
+font-family : "Noto-Thin" ;
+}
+.do_board_product_02 {
+text-align:center;
+padding:10px;
+}
+
+.do_board_product_text_01 {
+margin:5px 0 5px;
+font-family : "Noto-Thin" ;
+font-weight:bold;
+height:30px;
+}
+
+
+.do_board_product_text_02 {
+margin:5px 0 5px;
+font-size:11px;
+font-family : "Noto-Thin" ;
+color:#696969;
+}
+
+
+@media all and (min-width:1281px) and (max-width:1649px) { 
+.do_board_product_01 {
+position:relative; 
+display:block;
+width:100%;
+height:250px;
+background-color:#fdfdfd;
+border-bottom:1px solid #e9e9e9;
+}
+
+}
+
+@media all and (min-width:1025px) and (max-width:1280px) {  
+.do_board_product_01 {
+position:relative; 
+display:block;
+width:100%;
+height:240px;
+background-color:#fdfdfd;
+border-bottom:1px solid #e9e9e9;
+}
+.do_board_product_ta {
+display:inline-block;
+width:22.5%;
+border:1px solid #e9e9e9;
+margin:10px 10px 10px 10px;
+transition:all .3s;
+}
+
+}
+
+@media all and (min-width:768px) and (max-width:1024px) { 
+
+.do_board_product_01 {
+position:relative; 
+display:block;
+width:100%;
+height:240px;
+background-color:#fdfdfd;
+border-bottom:1px solid #e9e9e9;
+}
+.do_board_product_ta {
+display:inline-block;
+width:30%;
+border:1px solid #e9e9e9;
+margin:10px 10px 10px 10px;
+transition:all .3s;
+}
+
+}
+
+
+@media all and (min-width:481px) and (max-width:767px) { 
+
+.do_board_product_01 {
+position:relative; 
+display:block;
+width:100%;
+height:220px;
+background-color:#fdfdfd;
+border-bottom:1px solid #e9e9e9;
+}
+.do_board_product_ta {
+display:inline-block;
+width:44%;
+border:1px solid #e9e9e9;
+margin:10px 10px 10px 10px;
+transition:all .3s;
+}
+
+
+}
+
+@media all and (min-width:320px) and (max-width:480px) { 
+
+.do_board_product_01 {
+position:relative; 
+display:block;
+width:100%;
+height:160px;
+background-color:#fdfdfd;
+border-bottom:1px solid #e9e9e9;
+}
+.do_board_product_ta {
+display:inline-block;
+width:42.5%;
+border:1px solid #e9e9e9;
+margin:10px 10px 10px 10px;
+transition:all .3s;
+}
+
+
+}
+
+
+/* 상품 일반 목록 */
+
+/* 상품 일반 상세 */
+
+.do_board_product_read_01 {
+font-family : "Noto-Thin" ;
+}
+.do_board_product_read_02 {
+font-family : "Noto-Thin" ;
+font-size:15px;
+font-weight:bold;
+}
+
+/* 상품 일반 상세 */
+
+/* 상품 q&a 목록 */
+
+.do_board_qna_img img {
+
+width:80px;
+height:80px;
+border:1px solid #e9e9e9;
+margin:0 10px 0 10px;
+}
+
+
+@media all and (min-width:320px) and (max-width:480px) { 
+
+.do_board_qna_img img {
+width:50px;
+height:50px;
+border:1px solid #e9e9e9;
+margin:0 10px 0 0px;
+}
+
+
+}
+
+
+/* 상품 q&a 목록 */

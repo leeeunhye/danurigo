@@ -1,0 +1,68 @@
+  
+  	  <div class="review_all">
+         <div class="review_ta">
+          
+
+             <!-- 타이틀 -->
+             <div class="item_title">
+                 <p>REVIEW</p>
+                 <p>구매해주신 고객님께서 작성해주신 솔직리뷰!</p>
+             </div>
+             <!-- 타이틀 -->
+             
+    
+<div module="board_list_4">
+     <!--
+                    $count = 10
+                    $subject_cut = 15
+      -->
+    <div class="swiper reviewslide" >
+      <div class="swiper-wrapper">
+<!-- 반복 -->
+    <div class="review_area swiper-slide">
+    <div class="reivew_img"><a href="{$link_board_detail}">{$product_img}</a></div>
+        <div class="review_pa">
+    <div class="review_title_01">{$subject}</div>
+    <div class="review_title_02">{$content}</div>
+	<div class="reivew_view">{$write_date|date:Y-m-d}</div>
+        </div>
+    </div>
+<!-- 반복 -->
+
+<!-- 반복 -->
+    <div class="review_area swiper-slide">
+    <div class="reivew_img"><a href="{$link_board_detail}">{$product_img}</a></div>
+        <div class="review_pa">
+    <div class="review_title_01">{$subject}</div>
+    <div class="review_title_02">{$content}</div>
+	<div class="reivew_view">{$write_date|date:Y-m-d}</div>
+        </div>
+    </div>
+<!-- 반복 -->
+          
+    </div>
+      <div class="reviewnext"><img src="/web/upload/dor_main_img/review_next.png"></div>
+      <div class="reviewprev"><img src="/web/upload/dor_main_img/review_prev.png"></div>
+        </div>
+
+    
+</div>	
+    
+
+    <script>
+      var swiper = new Swiper(".reviewslide", {
+        slidesPerView: 4,
+
+    autoplay: {
+    delay: 3000,
+  },
+        navigation: {
+          nextEl: ".reviewnext",
+          prevEl: ".reviewprev",
+        },
+
+      });
+    </script>
+             
+         </div>
+      </div>

@@ -1,0 +1,107 @@
+<!--@layout(/layout/basic/layout.html)-->
+<div module="board_ModifyPackage_8">
+    <!--@css(/css/module/board/modifyPackage.css)-->
+    <div module="board_title_8">
+            <!--- 타이틀 --->
+    <div class="do_sub_title_ta">
+        <span class="do_sub_title">{$board_title}</span>
+    </div>
+<!--- 타이틀 --->
+    </div>
+
+    <div module="board_modify_8">
+        <div class="ec-base-table typeWrite">
+            <table border="1" summary="">
+            <caption>글 수정 폼</caption>
+           
+            <tbody>
+                <!--- 리스트 --->
+                <div class="do_board_write_ta_01">
+                    <span scope="row">제목</span>
+                    <span class="do_board_write_767_01">{$form.board_category} {$form.subject} {$form.notice} {$form.is_post}</span>
+                </div>
+
+				
+                <div class="do_board_write_ta_01 {$config.is_login|display}">
+                    <span scope="row">작성자</span>
+                    <span>{$form.writer}</span>
+                </div>
+                <div class="do_board_write_ta_01 {$config.use_write_email|display}">
+                    <span scope="row">이메일</span>
+                    <span class="do_board_write_767_02">{$form.email}</span>
+                </div>
+                <div class="do_board_write_ta_01 {$config.is_use_point|display}">
+                    <span scope="row">평점</span>
+                    <span>{$form.point}</span>
+                </div>
+				
+
+                <div>
+				{$form.content}
+                </div>
+               <!-- <tr class="ucc">
+                    <th scope="row">UCC URL</th>
+                    <td>{$form.ucc}</td>
+                </tr> --->
+			<!--- 리스트 --->
+            </tbody>
+
+           <div class="do_board_write_ta_02 {$config.use_attach|display}">
+                <div class="do_board_write_ta_02_01">
+                    <span>첨부파일1</span>
+                    <span>{$form.attach_file} {$attached_file1}</span>
+                </div>
+                <div class="do_board_write_ta_02_01">
+                    <span scope="row">첨부파일2</span>
+                    <span>{$form.attach_file} {$attached_file2}</span>
+                </div>
+                <div class="do_board_write_ta_02_01">
+                    <span scope="row">첨부파일3</span>
+                    <span>{$form.attach_file} {$attached_file3}</span>
+                </div>
+                <div class="do_board_write_ta_02_01">
+                    <span scope="row">첨부파일4</span>
+                    <span>{$form.attach_file} {$attached_file4}</span>
+                </div>
+                <div class="do_board_write_ta_02_01">
+                    <span scope="row">첨부파일5</span>
+                    <span>{$form.attach_file} {$attached_file5}</span>
+                </div>
+            </div>
+
+           <div class="do_board_write_ta_02 {$config.use_password|display}">
+                <div class="do_board_write_ta_02_01 {$config.use_password|display}">
+                    <span scope="row">비밀번호</span>
+                    <span>{$form.password} <span class="{$password_rule_help_display|display}">(영문 대소문자/숫자/특수문자 중 2가지 이상 조합, 10자~16자)</span></span>
+                </div>
+                <div class="do_board_write_ta_02_01 {$config.use_secret|display}">
+                    <span scope="row">비밀글설정</span>
+                    <span>{$form.secure}</span>
+                </div>
+                <div class="do_board_write_ta_02_01 captcha {$config.use_captcha_write|display}">
+                    <span scope="row">보안문자</span>
+                    <span>
+                        {$captcha_image} {$captcha_refresh}
+                        {$form.captcha} <span class="ec-base-help txtInfo">영문, 숫자 조합을 공백없이 입력하세요(대소문자구분)</span>
+                    </span>
+                </div>
+                <div class="do_board_write_ta_02_01 agree {$config.is_login|display}">
+                    <span scope="row">개인정보 수집 및 이용 동의</span><br><br>
+                    <span>
+                        {$form.privacy_agreement}<br><br>
+                        개인정보 수집 및 이용에 동의하십니까? {$form.privacy_agreement_radio}
+                    </span>
+                </div>
+            </div>
+            </table>
+        </div>
+
+        <div class="ec-base-button">
+            <span class="gLeft"><a href="{$link_board_list}" class="btnNormalFix sizeS">목록</a></span>
+            <span class="gRight">
+                <a href="#none" class="btnEmFix sizeS" onclick="{$action_modify}">수정</a>
+                <a href="{$link_board_list}" class="btnBasicFix sizeS">취소</a>
+            </span>
+        </div>
+    </div>
+</div>

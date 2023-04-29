@@ -1,0 +1,186 @@
+<!--@layout(/layout/basic/layout.html)-->
+<div module="Product_menupackage">
+    <!--@css(/css/module/product/menupackage.css)-->
+    <!--@js(/js/module/product/menucategory.js)-->
+
+    <div class="dor_product_title_ta" module="product_headcategory">
+        <p class="banner">{$top_image1_tag}{$top_image2_tag}{$top_image3_tag}</p>
+        <span class="dor_product_title">{$title_text_or_image}</span>
+    </div>
+
+    <!--@import(/product/shoppQ/searchContent.html)-->
+
+    <ul class="menuCategory">
+        <li module="product_displaycategory" style="display:{$display};" class="{$selected}">
+            <a href="{$link_product_list_sub}">{$category_name} <span class="count {$product_count_display|display}">({$product_count})</span></a>
+            <ul module="product_children">
+                <li class="{$selected}">
+                    <a href="{$link_product_list_sub}">{$category_name} <span class="{$product_count_display|display}">({$product_count})</span></a>
+                    <div class="button">
+                        {$children_icon}
+                        <ul module="product_children" class="subCategory">
+                            <li class="{$selected}"><a href="{$link_product_list_sub}">{$category_name} <span class="{$product_count_display|display}">({$product_count})</span></a></li>
+                            <li class="{$selected}"><a href="{$link_product_list_sub}">{$category_name} <span class="{$product_count_display|display}">({$product_count})</span></a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="{$selected}">
+                    <a href="{$link_product_list_sub}">{$category_name} <span class="{$product_count_display|display}">({$product_count})</span></a>
+                    <div class="button">
+                        {$children_icon}
+                        <ul module="product_children" class="subCategory">
+                            <li class="{$selected}"><a href="{$link_product_list_sub}">{$category_name} <span class="{$product_count_display|display}">({$product_count})</span></a></li>
+                            <li class="{$selected}"><a href="{$link_product_list_sub}">{$category_name} <span class="{$product_count_display|display}">({$product_count})</span></a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</div>
+
+
+<div module="product_normalpackage">
+    <!--@css(/css/module/product/listnormal.css)-->
+    <div module="product_normalmenu">
+        <!--
+            $compare_page = /product/compare.html
+        -->
+ 
+        <div class="function" style="border:0px solid #e9e9e9;">
+            <p class="prdCount" style="font-size:11px; color:#555555;">등록 제품 : <strong>{$total_count}</strong>개</p>
+<!-------- 셀렉터 메뉴 --------->
+<select name="orderby" module="product_Orderby" onchange="window.open(value,'_self');" style="font-size:11px; color:#555555; margin-top:10px;">
+<option value="{$param}" {$style}>{$sort_name}</option>
+<option value="{$param}"  {$style}>{$sort_name}</option>
+</select>
+
+<script language="javascript">
+function go_url(url)
+{
+    if(url != '')   window.open(url,'_self');
+}
+</script>
+<!-------- 셀렉터 메뉴 --------->
+            <span class="compare {$product_compare_display|display}"><a href="#none" onclick="{$product_compare_action}"><img src="//img.echosting.cafe24.com/skin/base_ko_KR/product/btn_compare.gif" alt="상품비교" /></a></span>
+        </div>
+
+        <fieldset class="condition {$select_search_display|display}">
+            <legend>조건별 검색</legend>
+            <p>
+                <!--@js(/js/module/product/product_selectsearch.js)-->
+                <select class="FirstSelect" module="product_FirstSelect">
+                    <option value="">-조건선택-</option>
+                    <option value="{$value}" {$selected}>{$title}</option>
+                    <option value="{$value}" {$selected}>{$title}</option>
+                </select>
+                <select class="SecondSelect" module="product_SecondSelect">
+                    <option value="">-조건선택-</option>
+                    <option value="{$value}" {$selected}>{$title}</option>
+                    <option value="{$value}" {$selected}>{$title}</option>
+                </select>
+                <a href="#SelectSearch" class="SelectSearch"><img src="//img.echosting.cafe24.com/skin/base_ko_KR/common/btn_list_search.gif" alt="검색" /></a>
+            </p>
+        </fieldset>
+    </div>
+ </div>
+
+
+    <div module="product_listnormal" class="ec-base-product product_02_area" style="margin-top:60px;">
+        <!--
+            $count = 12
+                ※ 상품진열갯수를 설정하는 변수입니다. 설정하지 않을 경우, 최대 200개의 상품이 진열 됩니다.
+                ※ 진열된 상품이 많으면, 쇼핑몰에 부하가 발생할 수 있습니다.
+            $basket_result = /product/add_basket.html
+            $basket_option = /product/basket_option.html
+        -->
+    <ul class="prdList grid4">
+ <li id="anchorBoxId_{$product_no}">
+
+            <div class="thumbnail">
+                <div class="prdImg">
+                    <a href="{$link_product_detail}" name="anchorBoxName_{$product_no}"><img src="{$image_medium}" id="{$image_medium_id}" alt="{$seo_alt_tag}" /><span module="product_Imagestyle"><span class="prdIcon {$icon_class_name}" style="background-image:url('{$icon_url}');"></span></span></a>
+				<!-- 품절 -->
+             <div class="soldout_list {$soldout_icon|display:{$soldout_icon}}"><div class="slode_text">SOLD OUT</div></div>
+               <!-- 품절 -->
+
+                    </div>
+
+				<div style=" margin-top:15px; margin-left: 10px;">
+
+					<div class="name" style=" text-align:left; ">
+						<div class="product_name" style="font-family: 'Nanum Gothic', sans-serif ;" ><a href="/product/detail.html{$param}" class="{$product_name_display|display}" style="text-decoration: none;font-weight:bold;line-height:20px;">{$product_name}</a></div>
+					</div>
+					
+					
+
+					<!--- 서브항목 ---->
+					
+					<div class="description" style="margin-top:10px; line-height:18px;">
+					<a href="{$link_product_detail}" name="anchorBoxName_{$product_no}">
+					<ul module="product_ListItem" class="spec" style="margin-top:10px; ">
+						 <li class="{$item_display|display} product_text_close" rel="{$item_title|striptag}" style="text-align:left; font-family: 'Nanum Gothic', sans-serif; "><strong class="title {$item_title_display|display}" >{$item_title} :</strong> {$item_content}</li>
+						 <li class="{$item_display|display} product_text_close" rel="{$item_title|striptag}" style="text-align:left; font-family: 'Nanum Gothic', sans-serif; "><strong class="title {$item_title_display|display}" >{$item_title} :</strong> {$item_content}</li>
+					</ul>
+					</a>
+
+					</div>
+						
+			</div>
+				<!--- 서브항목 ---->
+            </div>
+		
+        </li>
+          <li id="anchorBoxId_{$product_no}">
+
+            <div class="thumbnail">
+                <div class="prdImg">
+                    <a href="{$link_product_detail}" name="anchorBoxName_{$product_no}"><img src="{$image_medium}" id="{$image_medium_id}" alt="{$seo_alt_tag}" /><span module="product_Imagestyle"><span class="prdIcon {$icon_class_name}" style="background-image:url('{$icon_url}');"></span></span></a>
+				<!-- 품절 -->
+             <div class="soldout_list {$soldout_icon|display:{$soldout_icon}}"><div class="slode_text">SOLD OUT</div></div>
+               <!-- 품절 -->
+
+                    </div>
+
+				<div style=" margin-top:15px; margin-left: 10px;">
+
+					<div class="name" style=" text-align:left; ">
+						<div class="product_name" style="font-family: 'Nanum Gothic', sans-serif ;" ><a href="/product/detail.html{$param}" class="{$product_name_display|display}" style="text-decoration: none;font-weight:bold;line-height:20px;">{$product_name}</a></div>
+					</div>
+					
+					
+
+					<!--- 서브항목 ---->
+					
+					<div class="description" style="margin-top:10px; line-height:18px;">
+					<a href="{$link_product_detail}" name="anchorBoxName_{$product_no}">
+					<ul module="product_ListItem" class="spec" style="margin-top:10px; ">
+						 <li class="{$item_display|display} product_text_close" rel="{$item_title|striptag}" style="text-align:left; font-family: 'Nanum Gothic', sans-serif; "><strong class="title {$item_title_display|display}" >{$item_title} :</strong> {$item_content}</li>
+						 <li class="{$item_display|display} product_text_close" rel="{$item_title|striptag}" style="text-align:left; font-family: 'Nanum Gothic', sans-serif; "><strong class="title {$item_title_display|display}" >{$item_title} :</strong> {$item_content}</li>
+					</ul>
+					</a>
+
+					</div>
+						
+			</div>
+				<!--- 서브항목 ---->
+            </div>
+		
+        </li>
+    </ul>
+    </div>
+</div>
+
+<div module="product_normalpaging" class="ec-base-paginate">
+    <a href="{$param_first}" class="first"><img src="//img.echosting.cafe24.com/skin/base/common/btn_page_first.gif" alt="첫 페이지" /></a>
+    <a href="{$param_before}"><img src="//img.echosting.cafe24.com/skin/base/common/btn_page_prev.gif" alt="이전 페이지" /></a>
+    <ol>
+        <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+        <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+        <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+        <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+        <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+    </ol>
+    <a href="{$param_next}"><img src="//img.echosting.cafe24.com/skin/base/common/btn_page_next.gif" alt="다음 페이지" /></a>
+    <a href="{$param_last}" class="last"><img src="//img.echosting.cafe24.com/skin/base/common/btn_page_last.gif" alt="마지막 페이지" /></a>
+</div>

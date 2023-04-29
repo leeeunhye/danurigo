@@ -1,0 +1,112 @@
+.xans-mall-urgencycall .info { margin:20px 10px; color:#8f8f8f; }
+.xans-mall-urgencycall .required { margin:-35px 0 10px; text-align:right; }
+.xans-mall-urgencycall .required img { vertical-align:middle; }
+.xans-mall-urgencycall .ec-base-table input[type=text],
+.xans-mall-urgencycall .ec-base-table textarea { width:500px; }
+.xans-mall-urgencycall .ec-base-table textarea { height:100px; }
+.xans-mall-urgencycall .ec-base-table #captcha { width:160px; }
+
+
+/* new css */
+
+
+.form_title {
+   text-align:center;
+   padding:30px 0 30px;
+   border-bottom:1px solid #ddd;  
+   width:600px;
+   margin:0 auto;
+   }
+.form_title p:nth-child(1) {
+   
+   font-family: 'Nanum Gothic', sans-serif;
+   font-size:20px;
+   font-weight: bold;
+   
+   }
+.form_title p:nth-child(2) {
+   
+   font-family: 'Nanum Gothic', sans-serif;
+   font-size:14px;
+   margin-top:10px;
+   
+   }
+
+.form_all {
+       background-color:#fff;
+       border:1px solid #ddd;
+       border-radius: 20px;
+       box-shadow: 0 0 10px #e8e8e8;
+   width:600px;
+   margin:30px auto;
+   }
+
+.form_ta {
+   padding:20px;
+   }
+
+.form_all tr {
+  width:70%;
+    height:70px;
+   }
+
+.form_all th {
+   height:35px;
+   width:20%;
+   text-align:left;
+   font-family: 'Nanum Gothic', sans-serif;
+   font-weight: normal;
+   font-size:14px;
+   line-height:35px;
+   }
+
+.form_all td input {
+       border:0px solid #ddd;
+       font-size:12px;
+       color:#838383;
+       height:35px;
+  		background-color:#f4f4f4;
+   }
+.form_line input {
+   width:95%;
+   }
+.form_line textarea {
+width:95%;
+   height:150px;
+}
+
+.form_all p {
+   font-size:11px;
+   color:#555;
+   }
+.form_file {
+   transform: translateY(10px);
+   }
+.form_file tr {
+        height:30px;
+   }
+.form_file input {
+  background-color:#fff !important ;
+   }
+   .dor_form_bt {
+       width:200px;
+       height:45px;
+       background-color:#222;
+       margin:15px auto;
+       border-radius: 2px;
+       text-align:center;
+       line-height:45px;
+       font-family: 'Nanum Gothic', sans-serif;
+       transition:all .3s;
+       color:#fff;
+       font-size:14px;
+       }
+    .dor_form_bt:hover {
+        background-color:#3c5075;
+        }
+    .dor_form_bt a {
+        color:#fff;
+        font-size:14px;
+        text-decoration:none !important
+        }
+.clear{ clear:both; }

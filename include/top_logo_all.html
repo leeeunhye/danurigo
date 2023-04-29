@@ -1,0 +1,31 @@
+<!--- 스크롤 자바 --->
+<script>
+$(window).scroll(function(){
+var height = $(document).scrollTop(); //실시간으로 스크롤의 높이를 측정
+if(height > 150){
+$('.top_menu').addClass('top_menu_fixed');
+}else if(height < 150){
+$('.top_menu').removeClass('top_menu_fixed');
+}
+});
+
+</script>
+<!--- 스크롤 자바 --->
+    <div class="top_logo_all">
+         <div class="top_logo_ta">
+             
+      <!-- 로고 -->
+    <!--@import(/include/top_logo.html)-->
+      <!-- 로고 -->
+             
+      <!-- 메뉴 -->
+	<!--@import(/include/top_menu.html)-->
+      <!-- 메뉴 -->
+             
+      <!-- 아이콘 -->
+	<!--@import(/include/top_icon.html)-->
+      <!-- 아이콘 -->
+             
+         </div>
+   </div>
+    

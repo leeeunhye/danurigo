@@ -1,0 +1,178 @@
+<!--@layout(/layout/basic/layout.html)-->
+        <!--- 타이틀 --->
+    <div class="do_sub_title_ta">
+        <span class="do_sub_title">상품검색</span>
+    </div>
+<!--- 타이틀 --->
+
+<!--@import(/product/shoppQ/searchForm_typeTop.html)-->
+
+<div module="Search_Result" class="ec-base-product">
+    <!--
+        $count = 8
+    -->
+
+    <ul class="prdList grid4">
+ <li id="anchorBoxId_{$product_no}">
+
+            <div class="thumbnail">
+                <div class="prdImg">
+                    <a href="{$link_product_detail}" name="anchorBoxName_{$product_no}"><img src="{$image_medium}" id="{$image_medium_id}" alt="{$seo_alt_tag}" /><span module="product_Imagestyle"><span class="prdIcon {$icon_class_name}" style="background-image:url('{$icon_url}');"></span></span></a>
+					<div class="item_cart">{$basket_icon}</div>
+				<!-- 품절 -->
+             <div class="soldout_list {$soldout_icon|display:{$soldout_icon}}"><div class="slode_text">SOLD OUT</div></div>
+               <!-- 품절 -->
+              <!-- 할인율 -->
+             <div class="item_sale">
+                    <div class="new_sale {$product_custom|display}">
+              <script>    
+var customPrice = Number( '{$product_custom}'.replace(/,/g, '') );
+var price = Number( '{$product_price}'.replace(/,/g, '') );
+var result = Math.round( ((customPrice -price) * 100) / customPrice);
+if(result != 0 && result != '-Infinity')
+document.write(result + '<font style="font-size:13px; padding-left:2px;">%</font>');
+                 </script>
+                     </div>
+  			  </div>
+                    </div>
+                <!-- 할인율 -->
+				<div class="clear"></div> 
+                <div class="name" style="padding:10px 0 30px;  text-align:left; ">
+                    <div class="product_name" style="float:left; font-family: 'Nanum Gothic', sans-serif ;" ><a href="/product/detail.html{$param}" class="{$product_name_display|display}" style="text-decoration: none;font-weight:bold;line-height:20px;">{$product_name}</a></div>
+                </div>
+                
+					<div class="clear"></div> 
+                    <!-- 요약설명 -->
+                    <div class="product_sub_text" >
+					{$summary_desc}
+                     </div>
+                    <!-- 요약설명 -->
+
+					<div class="clear"></div> 
+
+				
+
+				 <!--- 판매영역 --->
+                <div class="new_price">
+                    
+                    <!-- 판매가 -->
+                    <div class="new_price_sub">
+                    <div class="{$product_custom|display} new_price_custom" style="line-height:18px; padding-bottom:15px;">{$disp_product_custom}</div>
+                    <div class="price {$product_price_display|display} {$product_sale_strike}"><b class="new_price_01">{$disp_product_price}</b><span class="{$product_price_ref_display|display} new_price_01"><b>{$txt_product_price_ref}</b></span><span id="span_product_price_text" class="new_price_01"><b>{$product_tax_type_text}</b></span></div>
+					<div class="price sale {$product_sale_display|display} new_price_01"><b>{$product_sale_price}</b></div>
+                        </div>
+                    <!-- 판매가 -->
+
+                    </div>
+                <!--- 판매영역 --->
+
+
+                <!--- 서브항목 ---->
+				
+				<div class="description" style="margin-top:10px; line-height:18px;">
+              	<a href="{$link_product_detail}" name="anchorBoxName_{$product_no}">
+                <ul module="product_ListItem" class="spec" style="margin-top:10px; ">
+                     <li class="{$item_display|display} product_text_close" rel="{$item_title|striptag}" style="text-align:left; font-family: 'Nanum Gothic', sans-serif; "><strong class="title {$item_title_display|display}" >{$item_title} :</strong> {$item_content}</li>
+                     <li class="{$item_display|display} product_text_close" rel="{$item_title|striptag}" style="text-align:left; font-family: 'Nanum Gothic', sans-serif; "><strong class="title {$item_title_display|display}" >{$item_title} :</strong> {$item_content}</li>
+                </ul>
+				</a>
+
+                </div>
+                    
+
+				<!--- 서브항목 ---->
+            </div>
+		
+        </li>
+           <li id="anchorBoxId_{$product_no}" >
+       
+            <div class="thumbnail">
+                <div class="prdImg">
+                    <a href="{$link_product_detail}" name="anchorBoxName_{$product_no}"><img src="{$image_medium}" id="{$image_medium_id}" alt="{$seo_alt_tag}" /><span module="product_Imagestyle"><span class="prdIcon {$icon_class_name}" style="background-image:url('{$icon_url}');"></span></span></a>
+					<div class="item_cart">{$basket_icon}</div>
+				<!-- 품절 -->
+             <div class="soldout_list {$soldout_icon|display:{$soldout_icon}}"><div class="slode_text">SOLD OUT</div></div>
+               <!-- 품절 -->
+              <!-- 할인율 -->
+             <div class="item_sale">
+                    <div class="new_sale {$product_custom|display}">
+              <script>    
+var customPrice = Number( '{$product_custom}'.replace(/,/g, '') );
+var price = Number( '{$product_price}'.replace(/,/g, '') );
+var result = Math.round( ((customPrice -price) * 100) / customPrice);
+if(result != 0 && result != '-Infinity')
+document.write(result + '<font style="font-size:13px; padding-left:2px;">%</font>');
+                 </script>
+                     </div>
+  			  </div>
+                    </div>
+                <!-- 할인율 -->
+				<div class="clear"></div> 
+                <div class="name" style="padding:10px 0 30px;  text-align:left; ">
+                    <div class="product_name" style="float:left; font-family: 'Nanum Gothic', sans-serif ;" ><a href="/product/detail.html{$param}" class="{$product_name_display|display}" style="text-decoration: none;font-weight:bold;line-height:20px;">{$product_name}</a></div>
+                </div>
+                
+					<div class="clear"></div> 
+                    <!-- 요약설명 -->
+                    <div class="product_sub_text" >
+					{$summary_desc}
+                     </div>
+                    <!-- 요약설명 -->
+
+					<div class="clear"></div> 
+
+				
+
+				 <!--- 판매영역 --->
+                <div class="new_price">
+                    
+                    <!-- 판매가 -->
+                    <div class="new_price_sub">
+                    <div class="{$product_custom|display} new_price_custom" style="line-height:18px; padding-bottom:15px;">{$disp_product_custom}</div>
+                    <div class="price {$product_price_display|display} {$product_sale_strike}"><b class="new_price_01">{$disp_product_price}</b><span class="{$product_price_ref_display|display} new_price_01"><b>{$txt_product_price_ref}</b></span><span id="span_product_price_text" class="new_price_01"><b>{$product_tax_type_text}</b></span></div>
+					<div class="price sale {$product_sale_display|display} new_price_01"><b>{$product_sale_price}</b></div>
+                        </div>
+                    <!-- 판매가 -->
+
+                    </div>
+                <!--- 판매영역 --->
+
+
+                <!--- 서브항목 ---->
+				
+				<div class="description" style="margin-top:10px; line-height:18px;">
+              	<a href="{$link_product_detail}" name="anchorBoxName_{$product_no}">
+                <ul module="product_ListItem" class="spec" style="margin-top:10px; ">
+                     <li class="{$item_display|display} product_text_close" rel="{$item_title|striptag}" style="text-align:left; font-family: 'Nanum Gothic', sans-serif; "><strong class="title {$item_title_display|display}" >{$item_title} :</strong> {$item_content}</li>
+                     <li class="{$item_display|display} product_text_close" rel="{$item_title|striptag}" style="text-align:left; font-family: 'Nanum Gothic', sans-serif; "><strong class="title {$item_title_display|display}" >{$item_title} :</strong> {$item_content}</li>
+                </ul>
+				</a>
+             
+                </div>
+                    
+
+				<!--- 서브항목 ---->
+            </div>
+		
+        </li>
+    </ul>
+</div>
+
+<div module="search_paging" class="ec-base-paginate">
+    <a href="{$param_first}" class="first"><img src="//img.echosting.cafe24.com/skin/base/common/btn_page_first.gif" alt="첫 페이지" /></a>
+    <a href="{$param_before}"><img src="//img.echosting.cafe24.com/skin/base/common/btn_page_prev.gif" alt="이전 페이지" /></a>
+    <ol>
+        <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+        <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+        <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+        <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+        <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+        <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+        <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+        <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+        <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+        <li><a href="{$param}" class="{$param_class}">{$no}</a></li>
+    </ol>
+    <a href="{$param_next}"><img src="//img.echosting.cafe24.com/skin/base/common/btn_page_next.gif" alt="다음 페이지" /></a>
+    <a href="{$param_last}" class="last"><img src="//img.echosting.cafe24.com/skin/base/common/btn_page_last.gif" alt="마지막 페이지" /></a>
+</div>

@@ -1,0 +1,25 @@
+
+.xans-product-menupackage .menuCategory {text-align:center; margin-bottom:20px;}
+.xans-product-menupackage .menuCategory > li { transition:all .3s; display:inline-block; font-family : "Noto-Thin" ; margin-top:5px; padding-left:20px; padding-right:20px; text-align:center; font-size:13px; line-height:35px; vertical-align:top;border:1px solid #e9e9e9; }
+.xans-product-menupackage .menuCategory > li:hover { background-color:#000; transition:all .3s; }
+.xans-product-menupackage .menuCategory > li > a { color:#222;  }
+
+
+.xans-product-menupackage .menuCategory > li:hover a {color:#fff;}
+.xans-product-menupackage .menuCategory > li > a:hover { color:#fff; text-decoration:none; background-position:100% -95px }
+.xans-product-menupackage .menuCategory > li.selected > a { color:#008bcc; }
+.xans-product-menupackage .menuCategory > li .count { font-weight:normal; }
+.xans-product-menupackage .menuCategory > li > ul { padding:6px 0 0 0; }
+.xans-product-menupackage .menuCategory > li > ul > li { margin:8px 0 0 0; line-height:14px; }
+.xans-product-menupackage .menuCategory > li > ul > li > a { color:#575a63; }
+.xans-product-menupackage .menuCategory > li > ul > li > a:hover,
+.xans-product-menupackage .menuCategory > li > ul > li.selected > a { color:#008bcc; }
+.xans-product-menupackage .menuCategory > li > ul > li > .button { display:inline-block; position:relative; width:9px; height:14px; margin:1px 0 0 3px; vertical-align:top; }
+
+.xans-product-menupackage .subCategory { display:none; position:absolute; left:50%; top:13px; z-index:11; width:300px; margin:0 0 0 -151px; padding:6px 0; border:1px solid #565960; font-size:0; line-height:0; background:#fff url("//img.echosting.cafe24.com/skin/base_ko_KR/product/bg_sub_category_line.gif") repeat-y 150px 0; }
+.xans-product-menupackage .subCategory li { display:inline-block; width:130px; margin:8px 0 8px 18px; font-size:12px; line-height:14px; vertical-align:top; }
+.xans-product-menupackage .subCategory li a { color:#575a63; }
+.xans-product-menupackage .subCategory li a:hover,
+.xans-product-menupackage .subCategory li.selected a { color:#008bcc; }
+.xans-product-menupackage .menuCategory .button.selected { z-index:11; }
+.xans-product-menupackage .menuCategory .button.selected .subCategory { display:block; }
